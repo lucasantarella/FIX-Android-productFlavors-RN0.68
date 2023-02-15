@@ -4,7 +4,7 @@
  * <br> This script work only with RN 0.67.x and Android Gradle Plugin 7.2 - 7.3
 */
 
-const {readFile, writeFile} = require('fs');
+const {readFile, writeFile, copyFile} = require('fs');
 const reactNative = "./node_modules/react-native/react.gradle";
 
 const workaround = `
@@ -49,9 +49,10 @@ readFile(reactNative, 'utf-8', function (err, contents) {
         return;
     }
     if(!contents.includes(workaround)){
+
         contents = contents.split("\n");
-        contents.splice(338, 38);
-        contents[338] = [workaround];
+        contents.splice(337, 38);
+        contents[337] = [workaround];
         contents = contents.join("\n");
 
         writeFile(reactNative, contents, 'utf-8', function (err) {
