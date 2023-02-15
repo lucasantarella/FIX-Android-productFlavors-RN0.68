@@ -50,8 +50,8 @@ readFile(reactNative, 'utf-8', function (err, contents) {
     }
     if(!contents.includes(workaround)){
         contents = contents.split("\n");
-        contents.splice(288, 38);
-        contents[288] = [workaround];
+        contents.splice(338, 38);
+        contents[338] = [workaround];
         contents = contents.join("\n");
 
         writeFile(reactNative, contents, 'utf-8', function (err) {
