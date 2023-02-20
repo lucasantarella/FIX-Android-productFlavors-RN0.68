@@ -5,13 +5,11 @@ Common error `Unable to load script. Make sure you're either running a Metro ser
 
 I have noticed that when using productFlavors the React Native currentAssetsCopyTask does not work correctly because the index.android.bundle is not copied and past correctly since the file is needed to run the apk (because without it, the app crashes) .
 
-
 ## How to use?
 
- 1. Download the FIX-RN-productFlavors.js file and place it in the react native root project
- 2. In the script section of package.json add a new script: `"fix-productFlavors": "node FIX-RN-productFlavors.js"`
- 3. Enter the name of the created script in the Android build stream
-
+1.  Download the FIX-RN-productFlavors.js file and place it in the react native root project
+2.  In the script section of package.json add a new script: `"fix-productFlavors": "node FIX-RN-productFlavors.js"`
+3.  Enter the name of the created script in the Android build stream
 
 ### Example
 
@@ -24,7 +22,6 @@ scripts {
 .....
 
 ```
-
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N2ILOT0)
 
